@@ -2,6 +2,7 @@
   --main: #F58220;
   --dark: #3C3C3C;
   --light: #FDF2D0;
+  --back: #F3E2D4;
   --danger: #E74C3C;
   --body: #FAFAFA;
   --secondary: #8C8C8C;
@@ -196,6 +197,64 @@ footer {
   object-fit: cover;
   margin: 0 auto;
 }
+
+
+.featured-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-card-img {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.featured-card-img:hover {
+  transform: scale(1.02);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: background 0.3s ease;
+}
+
+.overlay .description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.featured-card-img:hover .overlay {
+  background: rgba(0,0,0,0.8);
+}
+
+.featured-card-img:hover .description {
+  opacity: 1;
+  max-height: 80px;
+}
+
+.overlay .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
 
 
 @keyframes scroll-logos {
