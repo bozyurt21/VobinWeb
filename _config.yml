@@ -28,8 +28,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   yardımcı oluyoruz. Vobin ile iş süreçlerinizi optimize edin ve
   rekabet avantajı elde edin. Güvenilir, profesyonel ve etkili
   danışmanlık hizmetlerimizle iş dünyasında öne çıkın.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/VobinWeb" # the subpath of your site, e.g. /blog
+url: "https://bozyurt21.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
