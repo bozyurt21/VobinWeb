@@ -138,9 +138,17 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  padding: 2rem;
+  padding: 3rem;
+
 }
 
+.team-card a {
+  color: var(--dark);
+  text-decoration: none;
+}
+.team-card a:hover {
+  color: var(--main);
+}
 .team-section {
     background-color: var(--body);
     padding: 3rem;
@@ -170,6 +178,25 @@ footer {
   flex-shrink: 0;
   object-fit: contain;
 }
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  height: 200px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
 
 @keyframes scroll-logos {
   0% {
