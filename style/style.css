@@ -43,6 +43,25 @@ footer {
     font-family: var(--font-body);
 }
 
+.footer-heading {
+    font-family: var(--font-heading);
+    color: #FAFAFA;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    font-family: var(--font-body);
+    color: #FAFAFA;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-bold {
+    font-weight: 600;
+}
+
 .custom-footer {
     background-color: var(--dark);
     color: var(--body);
@@ -287,6 +306,74 @@ footer {
   color: var(--dark);
   font-size: 1.1rem;
   line-height: 1.6;
+}
+
+.partnership-page {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+.partnership-page h1,
+.partnership-page h3,
+.partnership-page h4 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.partnership-page .card-title {
+  font-size: 1.4rem;
+  color: var(--dark);
+}
+
+.partnership-page .card i {
+  display: block;
+}
+
+
+.partnership-page .card {
+  transition: transform 0.3s ease;
+}
+
+.partnership-page .card:hover {
+  transform: translateY(-5px);
+}
+
+.partnership-page .highlight-box {
+  background: linear-gradient(to right, var(--secondary), var(--dark));
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.partnership-page .highlight-box h4,
+.partnership-page .highlight-box p {
+  color: #fff;
+}
+
+.subheading {
+  font-family: var(--font-heading);
+  color: var(--dark);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #FAFAFA;
+  margin-right: 1rem;
+}
+
+.sub-subheading{
+  font-family: var(--font-heading);
+  color: var(--dark);
+  font-size: 2rem;
+  margin: 1rem;
+
+}
+
+.partner-icon {
+  font-size: 2.5rem;
+  color: var(--black);
+  margin-bottom: 1rem;
 }
 
 
