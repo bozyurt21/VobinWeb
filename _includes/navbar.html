@@ -1,7 +1,7 @@
    <!-- Navbar -->
     <nav class="navbar sticky-top navbar-expand-lg custom-navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{ site.baseurl }}/">
             <img src="{{ site.baseurl }}/img/VobinLogo.png" alt="Vobin Logo" width="70" height="70" class = "logo">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,6 +14,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ site.baseurl }}/hakkimizda/">Hakkımızda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{{ site.baseurl }}/dosyalar">Dosyalar</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,6 +42,10 @@
                 </ul>
               </li>
             </ul>
+
+            <div class="ms-auto">
+              <a href="{{ site.baseurl }}/teklif" class="btn btn-light">Teklif Al</a>
+            </div>
           </div>
         </div>
     </nav>
