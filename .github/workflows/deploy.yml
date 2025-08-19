@@ -13,16 +13,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Setup Ruby (needed for Jekyll)
+      # Setup Ruby
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1
-          bundler-cache: true
+          bundler-cache: false   # Disable cache for now, to rebuild cleanly
 
-      # Install dependencies (using Gemfile + Gemfile.lock)
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
+      # Re-generate Gemfile.lock for Linux
+      - name: Recreate Gemfile.lock for Linux
+        run: |
+          rm -f Gemfile.lock
+          bundle lock --add-platform x86_64-linux
+          bundle install --jobs 4 --retry 3
 
       # Build Jekyll site
       - name: Build site with Jekyll
