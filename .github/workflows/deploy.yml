@@ -17,19 +17,12 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1  # Match your local Ruby version
+          ruby-version: 3.1
           bundler-cache: true
-      
-      - name: Remove Gemfile.lock (to avoid platform mismatch)
-        run: rm -f Gemfile.lock
 
+      # Install dependencies (using Gemfile + Gemfile.lock)
       - name: Install dependencies
         run: bundle install --jobs 4 --retry 3
-
-
-      # Install dependencies
-      - name: Install dependencies
-        run: bundle install
 
       # Build Jekyll site
       - name: Build site with Jekyll
@@ -37,7 +30,7 @@ jobs:
 
       # Deploy via FTP
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
