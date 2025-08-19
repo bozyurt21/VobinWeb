@@ -1,4 +1,4 @@
-name: Build and Deploy to FTP
+name: Build and Deploy
 
 on:
   push:
@@ -10,26 +10,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Setup Ruby (needed for Jekyll)
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: 3.1  # Match your local Ruby version
+          bundler-cache: true
 
+      # Install dependencies
       - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
+        run: bundle install
 
-      - name: Build Jekyll site
+      # Build Jekyll site
+      - name: Build site with Jekyll
         run: bundle exec jekyll build
 
+      # Deploy via FTP
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: _site
+          local-dir: ./_site
