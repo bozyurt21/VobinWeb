@@ -39,3 +39,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./_site/
+          server-dir: /            # root of your domain
+          dangerous-clean-slate: true   # wipes server dir before deploying
