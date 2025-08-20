@@ -5,7 +5,7 @@ permalink: /teklif/
 ---
 <div class="offer-container">
     <h1>Teklif Al</h1>
-    <form id="offerForm">
+    <form id="offerForm" method="POST" action="send-offer.php">
       <input type="email" name="email" placeholder="Your Email" required />
       <input type="text" name="header" placeholder="Offer Header" required />
       <textarea name="content" placeholder="Offer Details" required></textarea>
@@ -13,3 +13,28 @@ permalink: /teklif/
     </form>
     <p id="statusMessage"></p>
 </div>
+
+<script>
+document.getElementById("offerForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch("send_offer.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+    if (result.trim() === "success") {
+      document.getElementById("statusMessage").innerText = "Offer sent successfully!";
+    } else {
+      document.getElementById("statusMessage").innerText = "Failed to send offer. Try again later.";
+    }
+  })
+  .catch(() => {
+    document.getElementById("statusMessage").innerText = "Error sending offer.";
+  });
+});
+</script>
+

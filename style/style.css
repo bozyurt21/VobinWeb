@@ -400,8 +400,15 @@ footer {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   border: 1px solid var(--dark);
+}
+
+
+.offer-container h1 {
+  font-family: var(--font-heading);
+  color: var(--dark);
+  margin-bottom: 1.5rem;
 }
 
 h1 {
@@ -409,28 +416,29 @@ h1 {
   color: var(--dark);
 }
 
-input, textarea {
+.offer-container input, textarea {
   width: 100%;
   padding: 1rem;
-  margin: 0.8rem 0;
+  margin: 0.4rem 0;
   border: 1px solid var(--dark);
   border-radius: 4px;
   font-size: 16px;
 }
 
-button {
+.offer-container button {
   background-color: var(--main);
+  font-family: var(--font-heading);
   color: white;
   padding: 12px;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   font-size: 16px;
   cursor: pointer;
   width: 100%;
   border: 1px solid var(--dark);
 }
 
-button:hover {
+.offer-container button:hover {
   background-color: var(--danger);
 }
 
