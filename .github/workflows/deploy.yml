@@ -40,4 +40,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./_site/
           server-dir: /httpdocs/            # root of your domain
+          protocol: ftp
+          port: 21
+          passive: true
           dangerous-clean-slate: true   # wipes server dir before deploying
