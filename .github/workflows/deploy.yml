@@ -42,5 +42,5 @@ jobs:
           server-dir: /httpdocs/            # root of your domain
           protocol: ftp
           port: 21
-          passive: true
+          ftp-passive: true
           dangerous-clean-slate: true   # wipes server dir before deploying
